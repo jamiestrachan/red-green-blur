@@ -81,14 +81,12 @@ var RedGreenBlur = function () {
 	
 	var Tracker = (function () {
 		function track(action, label) {
-			var trackArgs = ['_trackEvent', 'RedGreenBlur', action];
-			
-			if (label) {
-				trackArgs.push(label);
-			}
-			
-			if (_gaq && _gaq.push) {
-				_gaq.push(trackArgs);
+			if (ga) {
+				if(label) {
+					ga('send', 'event', 'RedGreenBlur', action, label);
+				} else {
+					ga('send', 'event', 'RedGreenBlur', action);
+				}
 			}
 		}
 		
