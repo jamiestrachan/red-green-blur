@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>RedGreenBlur</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/redgreenblur.css">
+
+				<!--#include virtual="/_inc/ga.html" -->
+    </head>
+    <body class="mode-pregame">
+    	<div id="screens">
+      	<div class="screen" id="screen-pregame">
+        	<h1 id="title"><span class="red">Red</span><span class="green">Green</span><span class="blur">Blur</span></h1>
+          <div id="instructions">
+	          <p>Click the screen when the colour starts to change.<br />Don't click too soon!</p>
+  	        <p><button id="begin">Begin</button></p>
+					</div>              
+        </div>
+        <div class="screen" id="screen-game">
+        	<div id="message"></div>
+        </div>
+        <div class="screen" id="screen-postgame">
+        	<div id="result"></div>
+          <p><button id="replay">Again?</button></p>
+        </div>
+      </div>
+      
+      <script src="js/redgreenblur.js"></script>
+			<script>
+				var rgb = new RedGreenBlur();
+				rgb.init();
+			</script>
+    </body>
+</html>
